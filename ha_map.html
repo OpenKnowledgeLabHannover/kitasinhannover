@@ -1,0 +1,1716 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://rawgithub.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://rawgit.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_66eef36e2c604219a589b96399b5019c {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_66eef36e2c604219a589b96399b5019c" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_66eef36e2c604219a589b96399b5019c = L.map('map_66eef36e2c604219a589b96399b5019c', {
+                                           center:[52.377,9.7404],
+                                           zoom: 12,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_af21beaac77844b6a1e28088695753aa = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_66eef36e2c604219a589b96399b5019c);
+
+        
+        
+            
+
+            var marker_e09827c49c8f4914800c756a878d8c6a = L.marker(
+                [52.3801452,9.6659453],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_04478eace5c141a39637a5711e61e1e9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e09827c49c8f4914800c756a878d8c6a.setIcon(icon_04478eace5c141a39637a5711e61e1e9);
+            
+        
+            
+            var popup_09df6a8138b64aae836e167c213ae0bf = L.popup({maxWidth: '300'});
+
+            
+                var html_19e6d2c587b040308426e269d1f31476 = $('         <div id="html_19e6d2c587b040308426e269d1f31476"                 style="width: 100.0%; height: 100.0%;">                 Ahlemer Verbund Brüder-Grimm-Weg</div>                 ')[0];
+                popup_09df6a8138b64aae836e167c213ae0bf.setContent(html_19e6d2c587b040308426e269d1f31476);
+            
+
+            marker_e09827c49c8f4914800c756a878d8c6a.bindPopup(popup_09df6a8138b64aae836e167c213ae0bf);
+
+            
+        
+        
+            
+
+            var marker_19f4d48cff3943dc866c533fc4e4260f = L.marker(
+                [52.3754167,9.6604014],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_39cd6ceddf5f45578a90b238e285b36f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_19f4d48cff3943dc866c533fc4e4260f.setIcon(icon_39cd6ceddf5f45578a90b238e285b36f);
+            
+        
+            
+            var popup_92a501c3cff548039d87e98e9a136d2b = L.popup({maxWidth: '300'});
+
+            
+                var html_2f49f5980c7d43b4a1c14d5ab9619fec = $('         <div id="html_2f49f5980c7d43b4a1c14d5ab9619fec"                 style="width: 100.0%; height: 100.0%;">                 Ahlemer Verbund Negenstraße</div>                 ')[0];
+                popup_92a501c3cff548039d87e98e9a136d2b.setContent(html_2f49f5980c7d43b4a1c14d5ab9619fec);
+            
+
+            marker_19f4d48cff3943dc866c533fc4e4260f.bindPopup(popup_92a501c3cff548039d87e98e9a136d2b);
+
+            
+        
+        
+            
+
+            var marker_60c2c7ccdaa642c6bcef831b92f64db1 = L.marker(
+                [52.3844095,9.6627468],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_39001a8f1906472797243045bf145e1e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_60c2c7ccdaa642c6bcef831b92f64db1.setIcon(icon_39001a8f1906472797243045bf145e1e);
+            
+        
+            
+            var popup_1e5e608ffa9844329a919da8305cb70d = L.popup({maxWidth: '300'});
+
+            
+                var html_31290fe298a9408ca3f563bb20795d0b = $('         <div id="html_31290fe298a9408ca3f563bb20795d0b"                 style="width: 100.0%; height: 100.0%;">                 Ahlemer Verbund Wunstorfer Landstraße</div>                 ')[0];
+                popup_1e5e608ffa9844329a919da8305cb70d.setContent(html_31290fe298a9408ca3f563bb20795d0b);
+            
+
+            marker_60c2c7ccdaa642c6bcef831b92f64db1.bindPopup(popup_1e5e608ffa9844329a919da8305cb70d);
+
+            
+        
+        
+            
+
+            var marker_70b3d22e04c44e11b77710cd53ab3428 = L.marker(
+                [52.3670407,9.8557403],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_1b0cf75abfbc4645a14f179748616672 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_70b3d22e04c44e11b77710cd53ab3428.setIcon(icon_1b0cf75abfbc4645a14f179748616672);
+            
+        
+            
+            var popup_6fd978f5e5fe4babaaff230e56198e7f = L.popup({maxWidth: '300'});
+
+            
+                var html_c9aa7946fcd54f0d85918c634ea48748 = $('         <div id="html_c9aa7946fcd54f0d85918c634ea48748"                 style="width: 100.0%; height: 100.0%;">                 Kita Oisseler Straße</div>                 ')[0];
+                popup_6fd978f5e5fe4babaaff230e56198e7f.setContent(html_c9aa7946fcd54f0d85918c634ea48748);
+            
+
+            marker_70b3d22e04c44e11b77710cd53ab3428.bindPopup(popup_6fd978f5e5fe4babaaff230e56198e7f);
+
+            
+        
+        
+            
+
+            var marker_72dbd0779c204aa0be6097bfc94c47a2 = L.marker(
+                [52.3405799,9.8420783],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_d1489765d19241bf94f4cad99a74b4fd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_72dbd0779c204aa0be6097bfc94c47a2.setIcon(icon_d1489765d19241bf94f4cad99a74b4fd);
+            
+        
+            
+            var popup_9d0d8f20c6514ec7bf345e9c320489a5 = L.popup({maxWidth: '300'});
+
+            
+                var html_a7f49c4153ba48019f0d74b837ee4302 = $('         <div id="html_a7f49c4153ba48019f0d74b837ee4302"                 style="width: 100.0%; height: 100.0%;">                 Hort im Spielpark KroKulino</div>                 ')[0];
+                popup_9d0d8f20c6514ec7bf345e9c320489a5.setContent(html_a7f49c4153ba48019f0d74b837ee4302);
+            
+
+            marker_72dbd0779c204aa0be6097bfc94c47a2.bindPopup(popup_9d0d8f20c6514ec7bf345e9c320489a5);
+
+            
+        
+        
+            
+
+            var marker_0d65111ba6354a16ab0d598aef099279 = L.marker(
+                [52.41289765,9.80025488011152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_b980a6e03816499da4b11ebcabf5c7b0 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0d65111ba6354a16ab0d598aef099279.setIcon(icon_b980a6e03816499da4b11ebcabf5c7b0);
+            
+        
+            
+            var popup_ec6c8341c65e4b95877a185e3af05074 = L.popup({maxWidth: '300'});
+
+            
+                var html_abfa84ff1b444c14bd2216a07ad92968 = $('         <div id="html_abfa84ff1b444c14bd2216a07ad92968"                 style="width: 100.0%; height: 100.0%;">                 Kita Rohdenhof</div>                 ')[0];
+                popup_ec6c8341c65e4b95877a185e3af05074.setContent(html_abfa84ff1b444c14bd2216a07ad92968);
+            
+
+            marker_0d65111ba6354a16ab0d598aef099279.bindPopup(popup_ec6c8341c65e4b95877a185e3af05074);
+
+            
+        
+        
+            
+
+            var marker_9c05a277985d41c28afae54e89284d70 = L.marker(
+                [52.41306075,9.79962666371463],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_029e023306454d4599711dbc1e0a1c5f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9c05a277985d41c28afae54e89284d70.setIcon(icon_029e023306454d4599711dbc1e0a1c5f);
+            
+        
+            
+            var popup_db51589e97454655b0982383c3dc69e2 = L.popup({maxWidth: '300'});
+
+            
+                var html_3da3d6e18c94427b95a2655c206de623 = $('         <div id="html_3da3d6e18c94427b95a2655c206de623"                 style="width: 100.0%; height: 100.0%;">                 Krippe Sutelstraße</div>                 ')[0];
+                popup_db51589e97454655b0982383c3dc69e2.setContent(html_3da3d6e18c94427b95a2655c206de623);
+            
+
+            marker_9c05a277985d41c28afae54e89284d70.bindPopup(popup_db51589e97454655b0982383c3dc69e2);
+
+            
+        
+        
+            
+
+            var marker_92ad884fba38459cb1d40df9eee0e2a4 = L.marker(
+                [52.36364195,9.66090432413433],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_c3ff1b5cc2b346b091091d5693442ba8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_92ad884fba38459cb1d40df9eee0e2a4.setIcon(icon_c3ff1b5cc2b346b091091d5693442ba8);
+            
+        
+            
+            var popup_76983314391342eda870f2df2dcb8434 = L.popup({maxWidth: '300'});
+
+            
+                var html_3c64df2803ba4a5299fcebd1728e6779 = $('         <div id="html_3c64df2803ba4a5299fcebd1728e6779"                 style="width: 100.0%; height: 100.0%;">                 Kita Freboldstraße</div>                 ')[0];
+                popup_76983314391342eda870f2df2dcb8434.setContent(html_3c64df2803ba4a5299fcebd1728e6779);
+            
+
+            marker_92ad884fba38459cb1d40df9eee0e2a4.bindPopup(popup_76983314391342eda870f2df2dcb8434);
+
+            
+        
+        
+            
+
+            var marker_4a389d92c39245d5b8bf40e1f3f10daa = L.marker(
+                [52.3381198,9.7654261],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_27221c7069fa4483b6ecfa9426f21c57 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4a389d92c39245d5b8bf40e1f3f10daa.setIcon(icon_27221c7069fa4483b6ecfa9426f21c57);
+            
+        
+            
+            var popup_8cbae2bc751649578c2aee7a8e50c2bc = L.popup({maxWidth: '300'});
+
+            
+                var html_6cddfb1c944349768fbd6b0bd6ee6135 = $('         <div id="html_6cddfb1c944349768fbd6b0bd6ee6135"                 style="width: 100.0%; height: 100.0%;">                 Hort im Spielpark Döhren </div>                 ')[0];
+                popup_8cbae2bc751649578c2aee7a8e50c2bc.setContent(html_6cddfb1c944349768fbd6b0bd6ee6135);
+            
+
+            marker_4a389d92c39245d5b8bf40e1f3f10daa.bindPopup(popup_8cbae2bc751649578c2aee7a8e50c2bc);
+
+            
+        
+        
+            
+
+            var marker_0b1fdf23e8c6420cac825af46a8f1ac2 = L.marker(
+                [52.3840984,9.8165415],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_2efe72239f4d467fa82d639cb4da6717 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0b1fdf23e8c6420cac825af46a8f1ac2.setIcon(icon_2efe72239f4d467fa82d639cb4da6717);
+            
+        
+            
+            var popup_c36dbc409e6c4d83b270e170a3e3be1e = L.popup({maxWidth: '300'});
+
+            
+                var html_0db4dce19cf14f138ab8a847be217f6b = $('         <div id="html_0db4dce19cf14f138ab8a847be217f6b"                 style="width: 100.0%; height: 100.0%;">                 Familienzentrum Rotekreuzstraße </div>                 ')[0];
+                popup_c36dbc409e6c4d83b270e170a3e3be1e.setContent(html_0db4dce19cf14f138ab8a847be217f6b);
+            
+
+            marker_0b1fdf23e8c6420cac825af46a8f1ac2.bindPopup(popup_c36dbc409e6c4d83b270e170a3e3be1e);
+
+            
+        
+        
+            
+
+            var marker_b8a2278f31884b7c912f7e2851422760 = L.marker(
+                [52.3849037,9.8154862],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_3b4aaef6df6c489ba073b292bd63c64d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b8a2278f31884b7c912f7e2851422760.setIcon(icon_3b4aaef6df6c489ba073b292bd63c64d);
+            
+        
+            
+            var popup_37d59476f74f41cc8a9cc48efd249311 = L.popup({maxWidth: '300'});
+
+            
+                var html_47df450ec03e4f528f3d284a646e65fe = $('         <div id="html_47df450ec03e4f528f3d284a646e65fe"                 style="width: 100.0%; height: 100.0%;">                 Hort im Spielpark Roderbruch </div>                 ')[0];
+                popup_37d59476f74f41cc8a9cc48efd249311.setContent(html_47df450ec03e4f528f3d284a646e65fe);
+            
+
+            marker_b8a2278f31884b7c912f7e2851422760.bindPopup(popup_37d59476f74f41cc8a9cc48efd249311);
+
+            
+        
+        
+            
+
+            var marker_32d5a7943da448038e9bb569805fca2e = L.marker(
+                [52.4083203,9.8130566],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_b925e1aee2024f13a9f23d7d75f79a1a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_32d5a7943da448038e9bb569805fca2e.setIcon(icon_b925e1aee2024f13a9f23d7d75f79a1a);
+            
+        
+            
+            var popup_c975079cacfc47b4bd4e767500e7b6c2 = L.popup({maxWidth: '300'});
+
+            
+                var html_d38c7e9002ed48d28ad0860157364373 = $('         <div id="html_d38c7e9002ed48d28ad0860157364373"                 style="width: 100.0%; height: 100.0%;">                 Kita In den Sieben Stücken</div>                 ')[0];
+                popup_c975079cacfc47b4bd4e767500e7b6c2.setContent(html_d38c7e9002ed48d28ad0860157364373);
+            
+
+            marker_32d5a7943da448038e9bb569805fca2e.bindPopup(popup_c975079cacfc47b4bd4e767500e7b6c2);
+
+            
+        
+        
+            
+
+            var marker_f30a58c611f84a29a2f2d25d28d1a8e0 = L.marker(
+                [52.4083607,9.81730737618296],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_619e477c970541928e5e121b0d80818f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f30a58c611f84a29a2f2d25d28d1a8e0.setIcon(icon_619e477c970541928e5e121b0d80818f);
+            
+        
+            
+            var popup_2ccc291db61f4a2fba53c42e3d4d77fa = L.popup({maxWidth: '300'});
+
+            
+                var html_7271129370a74ddeada6ac12d15671af = $('         <div id="html_7271129370a74ddeada6ac12d15671af"                 style="width: 100.0%; height: 100.0%;">                 Kita Paracelsusweg</div>                 ')[0];
+                popup_2ccc291db61f4a2fba53c42e3d4d77fa.setContent(html_7271129370a74ddeada6ac12d15671af);
+            
+
+            marker_f30a58c611f84a29a2f2d25d28d1a8e0.bindPopup(popup_2ccc291db61f4a2fba53c42e3d4d77fa);
+
+            
+        
+        
+            
+
+            var marker_3f5d5a5f9aeb45d3a72329f1c8b3d8e7 = L.marker(
+                [52.3947372,9.8058007],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_d78fd92d7eb540fcb302297a97db7bfe = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3f5d5a5f9aeb45d3a72329f1c8b3d8e7.setIcon(icon_d78fd92d7eb540fcb302297a97db7bfe);
+            
+        
+            
+            var popup_36467ba923c5405f839b1445ff76756f = L.popup({maxWidth: '300'});
+
+            
+                var html_179538464f8a4553ad7e81fa46dd5ccc = $('         <div id="html_179538464f8a4553ad7e81fa46dd5ccc"                 style="width: 100.0%; height: 100.0%;">                 Kita Villa Kunterbunt</div>                 ')[0];
+                popup_36467ba923c5405f839b1445ff76756f.setContent(html_179538464f8a4553ad7e81fa46dd5ccc);
+            
+
+            marker_3f5d5a5f9aeb45d3a72329f1c8b3d8e7.bindPopup(popup_36467ba923c5405f839b1445ff76756f);
+
+            
+        
+        
+            
+
+            var marker_82edefc9dd7d400fa38861d44dacd4ce = L.marker(
+                [52.4006422,9.715692],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_78846a0e6fa94ba48e7da8276b7b344e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_82edefc9dd7d400fa38861d44dacd4ce.setIcon(icon_78846a0e6fa94ba48e7da8276b7b344e);
+            
+        
+            
+            var popup_f809aafa869b49a8bb44c6d43a470b28 = L.popup({maxWidth: '300'});
+
+            
+                var html_2646a47f578c4a35a24abc0ef268c4f3 = $('         <div id="html_2646a47f578c4a35a24abc0ef268c4f3"                 style="width: 100.0%; height: 100.0%;">                 Familienzentrum Voltmerstraße</div>                 ')[0];
+                popup_f809aafa869b49a8bb44c6d43a470b28.setContent(html_2646a47f578c4a35a24abc0ef268c4f3);
+            
+
+            marker_82edefc9dd7d400fa38861d44dacd4ce.bindPopup(popup_f809aafa869b49a8bb44c6d43a470b28);
+
+            
+        
+        
+            
+
+            var marker_5213eb8eda6c45dd9501c94f4f4f5cca = L.marker(
+                [52.4132152,9.6970546],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_7a2cc3226faa482aa99219f5adc40d58 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5213eb8eda6c45dd9501c94f4f4f5cca.setIcon(icon_7a2cc3226faa482aa99219f5adc40d58);
+            
+        
+            
+            var popup_526f3dd748cf4f87882f7914729cbfa4 = L.popup({maxWidth: '300'});
+
+            
+                var html_3c5d604e5390484abd0b3cb66c63ab71 = $('         <div id="html_3c5d604e5390484abd0b3cb66c63ab71"                 style="width: 100.0%; height: 100.0%;">                 Kita Vinnhorster Weg</div>                 ')[0];
+                popup_526f3dd748cf4f87882f7914729cbfa4.setContent(html_3c5d604e5390484abd0b3cb66c63ab71);
+            
+
+            marker_5213eb8eda6c45dd9501c94f4f4f5cca.bindPopup(popup_526f3dd748cf4f87882f7914729cbfa4);
+
+            
+        
+        
+            
+
+            var marker_785925fb9a234a70a9ee2860c009cbc6 = L.marker(
+                [52.3830992,9.8156398],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_67e135036ef84d3f8eabd3d0be1b13a3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_785925fb9a234a70a9ee2860c009cbc6.setIcon(icon_67e135036ef84d3f8eabd3d0be1b13a3);
+            
+        
+            
+            var popup_79ee26a2c3544074bad202f514bb5888 = L.popup({maxWidth: '300'});
+
+            
+                var html_67e0ca155a18443fa1fa5349f9c5889f = $('         <div id="html_67e0ca155a18443fa1fa5349f9c5889f"                 style="width: 100.0%; height: 100.0%;">                 Rut-Bahlsen-Zentrum</div>                 ')[0];
+                popup_79ee26a2c3544074bad202f514bb5888.setContent(html_67e0ca155a18443fa1fa5349f9c5889f);
+            
+
+            marker_785925fb9a234a70a9ee2860c009cbc6.bindPopup(popup_79ee26a2c3544074bad202f514bb5888);
+
+            
+        
+        
+            
+
+            var marker_bc9292fb173b4e9992b752b6ccb2d32c = L.marker(
+                [52.3520669,9.8253636],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_d03b143ae9de4b1abba8c4f5b515b7fb = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bc9292fb173b4e9992b752b6ccb2d32c.setIcon(icon_d03b143ae9de4b1abba8c4f5b515b7fb);
+            
+        
+            
+            var popup_d145eb9eee4943fd9d9e26a5cd7770b0 = L.popup({maxWidth: '300'});
+
+            
+                var html_0aa2c45f7b8540f9bc28df03e5a17768 = $('         <div id="html_0aa2c45f7b8540f9bc28df03e5a17768"                 style="width: 100.0%; height: 100.0%;">                 Kita Heinemanhof</div>                 ')[0];
+                popup_d145eb9eee4943fd9d9e26a5cd7770b0.setContent(html_0aa2c45f7b8540f9bc28df03e5a17768);
+            
+
+            marker_bc9292fb173b4e9992b752b6ccb2d32c.bindPopup(popup_d145eb9eee4943fd9d9e26a5cd7770b0);
+
+            
+        
+        
+            
+
+            var marker_97eecc46259f47ada372a850b7ad5fdf = L.marker(
+                [52.36128365,9.81652407199952],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_e54b35551c3b4ae5a588fca6e50ff2ec = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_97eecc46259f47ada372a850b7ad5fdf.setIcon(icon_e54b35551c3b4ae5a588fca6e50ff2ec);
+            
+        
+            
+            var popup_ee04fe5085d84b2ea3f7ea23cdd0b2a3 = L.popup({maxWidth: '300'});
+
+            
+                var html_da3307ffb21247ef9878b3b293f92f13 = $('         <div id="html_da3307ffb21247ef9878b3b293f92f13"                 style="width: 100.0%; height: 100.0%;">                 Kita Neunkirchener Platz</div>                 ')[0];
+                popup_ee04fe5085d84b2ea3f7ea23cdd0b2a3.setContent(html_da3307ffb21247ef9878b3b293f92f13);
+            
+
+            marker_97eecc46259f47ada372a850b7ad5fdf.bindPopup(popup_ee04fe5085d84b2ea3f7ea23cdd0b2a3);
+
+            
+        
+        
+            
+
+            var marker_5d3e63d6f73c42adbdf559a21e42b80e = L.marker(
+                [52.3774555,9.7947664],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_f21cdc335b8d44cfa1c95b8001f1feb3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5d3e63d6f73c42adbdf559a21e42b80e.setIcon(icon_f21cdc335b8d44cfa1c95b8001f1feb3);
+            
+        
+            
+            var popup_b2041ae912e14af98192bcfd8bebd59e = L.popup({maxWidth: '300'});
+
+            
+                var html_a1bd599f988a41aa8af06c90082be1b2 = $('         <div id="html_a1bd599f988a41aa8af06c90082be1b2"                 style="width: 100.0%; height: 100.0%;">                 Kita Strelitzer Weg</div>                 ')[0];
+                popup_b2041ae912e14af98192bcfd8bebd59e.setContent(html_a1bd599f988a41aa8af06c90082be1b2);
+            
+
+            marker_5d3e63d6f73c42adbdf559a21e42b80e.bindPopup(popup_b2041ae912e14af98192bcfd8bebd59e);
+
+            
+        
+        
+            
+
+            var marker_b944484973814feca2e4f292e920c07c = L.marker(
+                [52.4171984,9.69366699521901],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_e09bff7c808048c69b90bd659dc40c58 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b944484973814feca2e4f292e920c07c.setIcon(icon_e09bff7c808048c69b90bd659dc40c58);
+            
+        
+            
+            var popup_cd7d147cf3534f8593231125eb226b61 = L.popup({maxWidth: '300'});
+
+            
+                var html_73b9a18a104341a78aca9f436ca7f643 = $('         <div id="html_73b9a18a104341a78aca9f436ca7f643"                 style="width: 100.0%; height: 100.0%;">                 Kita Friedrich-Klug-Straße</div>                 ')[0];
+                popup_cd7d147cf3534f8593231125eb226b61.setContent(html_73b9a18a104341a78aca9f436ca7f643);
+            
+
+            marker_b944484973814feca2e4f292e920c07c.bindPopup(popup_cd7d147cf3534f8593231125eb226b61);
+
+            
+        
+        
+            
+
+            var marker_10778faf690c498dafe73a40e8d72b0e = L.marker(
+                [52.3693985,9.70626624123905],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_aa66989cf4934e409fe54f94958adf98 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_10778faf690c498dafe73a40e8d72b0e.setIcon(icon_aa66989cf4934e409fe54f94958adf98);
+            
+        
+            
+            var popup_7c70dc2902534b53b996d369366b5a75 = L.popup({maxWidth: '300'});
+
+            
+                var html_bf3e9b83661b4fc7ac955c9ce3fd472c = $('         <div id="html_bf3e9b83661b4fc7ac955c9ce3fd472c"                 style="width: 100.0%; height: 100.0%;">                 Familienzentrum Nieschlagstraße</div>                 ')[0];
+                popup_7c70dc2902534b53b996d369366b5a75.setContent(html_bf3e9b83661b4fc7ac955c9ce3fd472c);
+            
+
+            marker_10778faf690c498dafe73a40e8d72b0e.bindPopup(popup_7c70dc2902534b53b996d369366b5a75);
+
+            
+        
+        
+            
+
+            var marker_cb2cae6d30814528aab2ce2f928c1a93 = L.marker(
+                [52.3643507,9.710656],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_2d7f9dc8d94e4646b8533eecafaa07d2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cb2cae6d30814528aab2ce2f928c1a93.setIcon(icon_2d7f9dc8d94e4646b8533eecafaa07d2);
+            
+        
+            
+            var popup_122ef44f5ec644229cb1db6c1148b0d6 = L.popup({maxWidth: '300'});
+
+            
+                var html_3d1205a026b9459aa7f337fd451504bc = $('         <div id="html_3d1205a026b9459aa7f337fd451504bc"                 style="width: 100.0%; height: 100.0%;">                 Hort im Spielpark Linden</div>                 ')[0];
+                popup_122ef44f5ec644229cb1db6c1148b0d6.setContent(html_3d1205a026b9459aa7f337fd451504bc);
+            
+
+            marker_cb2cae6d30814528aab2ce2f928c1a93.bindPopup(popup_122ef44f5ec644229cb1db6c1148b0d6);
+
+            
+        
+        
+            
+
+            var marker_86bbfcd796bf407c9881ccce1044437e = L.marker(
+                [52.3708507,9.7168061],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_b758beb2bfb0404cafabe7c5eaff299a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_86bbfcd796bf407c9881ccce1044437e.setIcon(icon_b758beb2bfb0404cafabe7c5eaff299a);
+            
+        
+            
+            var popup_e3a9b36fda594cb9a939a8a672885f58 = L.popup({maxWidth: '300'});
+
+            
+                var html_a135a1acbf524553a6c630a33bdbb7cb = $('         <div id="html_a135a1acbf524553a6c630a33bdbb7cb"                 style="width: 100.0%; height: 100.0%;">                 Krippe und Krabbelstube im Ihmezentrum</div>                 ')[0];
+                popup_e3a9b36fda594cb9a939a8a672885f58.setContent(html_a135a1acbf524553a6c630a33bdbb7cb);
+            
+
+            marker_86bbfcd796bf407c9881ccce1044437e.bindPopup(popup_e3a9b36fda594cb9a939a8a672885f58);
+
+            
+        
+        
+            
+
+            var marker_b3a62cafd89447e48594f3d58dcbec01 = L.marker(
+                [52.3657154,9.7145681],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_305b87588bfa45d58a63aa802693e20e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b3a62cafd89447e48594f3d58dcbec01.setIcon(icon_305b87588bfa45d58a63aa802693e20e);
+            
+        
+            
+            var popup_0d7ade474f8b467dae1745949cd9a29c = L.popup({maxWidth: '300'});
+
+            
+                var html_2e520b66cd88423996d4849582b73a50 = $('         <div id="html_2e520b66cd88423996d4849582b73a50"                 style="width: 100.0%; height: 100.0%;">                 Städtische Lehrkita Posthornstraße</div>                 ')[0];
+                popup_0d7ade474f8b467dae1745949cd9a29c.setContent(html_2e520b66cd88423996d4849582b73a50);
+            
+
+            marker_b3a62cafd89447e48594f3d58dcbec01.bindPopup(popup_0d7ade474f8b467dae1745949cd9a29c);
+
+            
+        
+        
+            
+
+            var marker_1bcca9e6b6244b3a984acf8a1cdbd5be = L.marker(
+                [52.3665644,9.7195859],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_80064aa297c843ab8e7a431bc44ffd4d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1bcca9e6b6244b3a984acf8a1cdbd5be.setIcon(icon_80064aa297c843ab8e7a431bc44ffd4d);
+            
+        
+            
+            var popup_8a1dd8664187447c8c78c62d8728971f = L.popup({maxWidth: '300'});
+
+            
+                var html_458c8ea8d2974d6dbc6278ffad2a66e4 = $('         <div id="html_458c8ea8d2974d6dbc6278ffad2a66e4"                 style="width: 100.0%; height: 100.0%;">                 Kita Ricklinger Straße</div>                 ')[0];
+                popup_8a1dd8664187447c8c78c62d8728971f.setContent(html_458c8ea8d2974d6dbc6278ffad2a66e4);
+            
+
+            marker_1bcca9e6b6244b3a984acf8a1cdbd5be.bindPopup(popup_8a1dd8664187447c8c78c62d8728971f);
+
+            
+        
+        
+            
+
+            var marker_57686755b1d94189994a6410e24f31df = L.marker(
+                [52.4036004,9.7459624],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_39ef7e6a43e249b084f05bb39e78a0c0 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_57686755b1d94189994a6410e24f31df.setIcon(icon_39ef7e6a43e249b084f05bb39e78a0c0);
+            
+        
+            
+            var popup_36486d1dd3794a08814908b9edf036d4 = L.popup({maxWidth: '300'});
+
+            
+                var html_f0c58f0df971400988d0650ed13dd3f6 = $('         <div id="html_f0c58f0df971400988d0650ed13dd3f6"                 style="width: 100.0%; height: 100.0%;">                 Kita Nordring</div>                 ')[0];
+                popup_36486d1dd3794a08814908b9edf036d4.setContent(html_f0c58f0df971400988d0650ed13dd3f6);
+            
+
+            marker_57686755b1d94189994a6410e24f31df.bindPopup(popup_36486d1dd3794a08814908b9edf036d4);
+
+            
+        
+        
+            
+
+            var marker_df3fb078b6e5401e9305ac5bb6d56eb5 = L.marker(
+                [52.3929072,9.8537636],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_728fef451a144673952c786d446a6769 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_df3fb078b6e5401e9305ac5bb6d56eb5.setIcon(icon_728fef451a144673952c786d446a6769);
+            
+        
+            
+            var popup_fab9b749d82f4ffba85615191dfa52db = L.popup({maxWidth: '300'});
+
+            
+                var html_7e91857f011e438ab38506fc0dce26ff = $('         <div id="html_7e91857f011e438ab38506fc0dce26ff"                 style="width: 100.0%; height: 100.0%;">                 Kita Waldstraße</div>                 ')[0];
+                popup_fab9b749d82f4ffba85615191dfa52db.setContent(html_7e91857f011e438ab38506fc0dce26ff);
+            
+
+            marker_df3fb078b6e5401e9305ac5bb6d56eb5.bindPopup(popup_fab9b749d82f4ffba85615191dfa52db);
+
+            
+        
+        
+            
+
+            var marker_c2b66b6626a94a18a7febed6815ccd21 = L.marker(
+                [52.3733058,9.8544601],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_ac4269f8b4ac46e29eed3a46c42fa577 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c2b66b6626a94a18a7febed6815ccd21.setIcon(icon_ac4269f8b4ac46e29eed3a46c42fa577);
+            
+        
+            
+            var popup_d27ca2e983474c5396cb2f11bcaf1cb3 = L.popup({maxWidth: '300'});
+
+            
+                var html_c355d9bb2d16487092a7c0f855b82893 = $('         <div id="html_c355d9bb2d16487092a7c0f855b82893"                 style="width: 100.0%; height: 100.0%;">                 Kita Oisseler Straße, Außenstelle Steinstraße</div>                 ')[0];
+                popup_d27ca2e983474c5396cb2f11bcaf1cb3.setContent(html_c355d9bb2d16487092a7c0f855b82893);
+            
+
+            marker_c2b66b6626a94a18a7febed6815ccd21.bindPopup(popup_d27ca2e983474c5396cb2f11bcaf1cb3);
+
+            
+        
+        
+            
+
+            var marker_722d118ba90444c0a91df417a77595f5 = L.marker(
+                [52.3669002,9.7370464],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_129355cd4172427697318da0ee7cd6bf = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_722d118ba90444c0a91df417a77595f5.setIcon(icon_129355cd4172427697318da0ee7cd6bf);
+            
+        
+            
+            var popup_de31a2ff44de467b83710dfd453c9084 = L.popup({maxWidth: '300'});
+
+            
+                var html_b24e2fa016724cac975327799a2f5693 = $('         <div id="html_b24e2fa016724cac975327799a2f5693"                 style="width: 100.0%; height: 100.0%;">                 Kita Trammplatz</div>                 ')[0];
+                popup_de31a2ff44de467b83710dfd453c9084.setContent(html_b24e2fa016724cac975327799a2f5693);
+            
+
+            marker_722d118ba90444c0a91df417a77595f5.bindPopup(popup_de31a2ff44de467b83710dfd453c9084);
+
+            
+        
+        
+            
+
+            var marker_d1cb74c8ed86470e9aaecd9fa0f26d9f = L.marker(
+                [52.3362974,9.8107942],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_680efb47946d406d98a55c7ee858b536 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d1cb74c8ed86470e9aaecd9fa0f26d9f.setIcon(icon_680efb47946d406d98a55c7ee858b536);
+            
+        
+            
+            var popup_022f115d568244fb89f8fd2c53cedac6 = L.popup({maxWidth: '300'});
+
+            
+                var html_529c1e913f114f7c9f07b22a73fe0190 = $('         <div id="html_529c1e913f114f7c9f07b22a73fe0190"                 style="width: 100.0%; height: 100.0%;">                 Kita Quittengarten</div>                 ')[0];
+                popup_022f115d568244fb89f8fd2c53cedac6.setContent(html_529c1e913f114f7c9f07b22a73fe0190);
+            
+
+            marker_d1cb74c8ed86470e9aaecd9fa0f26d9f.bindPopup(popup_022f115d568244fb89f8fd2c53cedac6);
+
+            
+        
+        
+            
+
+            var marker_11677054d6d74b39913ec089438ea874 = L.marker(
+                [52.3460659,9.6920843],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_961e8df7e1bc4dd8812a8dc572fadc06 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_11677054d6d74b39913ec089438ea874.setIcon(icon_961e8df7e1bc4dd8812a8dc572fadc06);
+            
+        
+            
+            var popup_64f71ef746204e48a2a7ada68dc52aaa = L.popup({maxWidth: '300'});
+
+            
+                var html_012cbc1628d54ebcab58911830777fc0 = $('         <div id="html_012cbc1628d54ebcab58911830777fc0"                 style="width: 100.0%; height: 100.0%;">                 Kita Canarisweg</div>                 ')[0];
+                popup_64f71ef746204e48a2a7ada68dc52aaa.setContent(html_012cbc1628d54ebcab58911830777fc0);
+            
+
+            marker_11677054d6d74b39913ec089438ea874.bindPopup(popup_64f71ef746204e48a2a7ada68dc52aaa);
+
+            
+        
+        
+            
+
+            var marker_f0115b67437d4c0f9c1675a6ea3c874f = L.marker(
+                [52.3916877,9.7105518],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_63cd085ccb414212ace0cdcb3c687c41 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f0115b67437d4c0f9c1675a6ea3c874f.setIcon(icon_63cd085ccb414212ace0cdcb3c687c41);
+            
+        
+            
+            var popup_b7ec0ed0a70a4d5aade0612d6f4cde32 = L.popup({maxWidth: '300'});
+
+            
+                var html_863dfb3b55844b4c913d603a035dfcbb = $('         <div id="html_863dfb3b55844b4c913d603a035dfcbb"                 style="width: 100.0%; height: 100.0%;">                 Kita Herrenhäuser Kirchweg</div>                 ')[0];
+                popup_b7ec0ed0a70a4d5aade0612d6f4cde32.setContent(html_863dfb3b55844b4c913d603a035dfcbb);
+            
+
+            marker_f0115b67437d4c0f9c1675a6ea3c874f.bindPopup(popup_b7ec0ed0a70a4d5aade0612d6f4cde32);
+
+            
+        
+        
+            
+
+            var marker_3d3135b02ad24ffb9e6b0b1c4d15ee88 = L.marker(
+                [52.3493469,9.7208156],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_b8fd6b2971d4420aabaf4f1ed14d6221 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3d3135b02ad24ffb9e6b0b1c4d15ee88.setIcon(icon_b8fd6b2971d4420aabaf4f1ed14d6221);
+            
+        
+            
+            var popup_012a1d25610a4bfb901d66bba71f6f97 = L.popup({maxWidth: '300'});
+
+            
+                var html_8ab5bf67d08441779754635061c7eb8b = $('         <div id="html_8ab5bf67d08441779754635061c7eb8b"                 style="width: 100.0%; height: 100.0%;">                 Hort im Spielpark Ricklingen</div>                 ')[0];
+                popup_012a1d25610a4bfb901d66bba71f6f97.setContent(html_8ab5bf67d08441779754635061c7eb8b);
+            
+
+            marker_3d3135b02ad24ffb9e6b0b1c4d15ee88.bindPopup(popup_012a1d25610a4bfb901d66bba71f6f97);
+
+            
+        
+        
+            
+
+            var marker_2bf426dff89d4be3a001816604dea27b = L.marker(
+                [52.4206249,9.77715370196321],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_d5badf2c0f1943489fd61e964f8b49ce = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2bf426dff89d4be3a001816604dea27b.setIcon(icon_d5badf2c0f1943489fd61e964f8b49ce);
+            
+        
+            
+            var popup_195bfd1e91f34fddb0a1a0b23982dd44 = L.popup({maxWidth: '300'});
+
+            
+                var html_d3f1a1b225e140abafc0742932084a1f = $('         <div id="html_d3f1a1b225e140abafc0742932084a1f"                 style="width: 100.0%; height: 100.0%;">                 Kita Im Wiesengrunde</div>                 ')[0];
+                popup_195bfd1e91f34fddb0a1a0b23982dd44.setContent(html_d3f1a1b225e140abafc0742932084a1f);
+            
+
+            marker_2bf426dff89d4be3a001816604dea27b.bindPopup(popup_195bfd1e91f34fddb0a1a0b23982dd44);
+
+            
+        
+        
+            
+
+            var marker_3955bb1e0d464e8386c12f999e1c8f1d = L.marker(
+                [52.4290043,9.6501264],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_7030d74379044b9eb3c2382a4dabfd2d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3955bb1e0d464e8386c12f999e1c8f1d.setIcon(icon_7030d74379044b9eb3c2382a4dabfd2d);
+            
+        
+            
+            var popup_6fa1ad25db774c2dac5aa5415c82c43b = L.popup({maxWidth: '300'});
+
+            
+                var html_fdcbd859310944e185275084634fedad = $('         <div id="html_fdcbd859310944e185275084634fedad"                 style="width: 100.0%; height: 100.0%;">                 Kita Wiedenlohe</div>                 ')[0];
+                popup_6fa1ad25db774c2dac5aa5415c82c43b.setContent(html_fdcbd859310944e185275084634fedad);
+            
+
+            marker_3955bb1e0d464e8386c12f999e1c8f1d.bindPopup(popup_6fa1ad25db774c2dac5aa5415c82c43b);
+
+            
+        
+        
+            
+
+            var marker_3a2e5f69ea5a4565abc32c0a20900dda = L.marker(
+                [52.4115066,9.6642286],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_d0ca875cdee74fafbdc820d25aa4c5cf = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3a2e5f69ea5a4565abc32c0a20900dda.setIcon(icon_d0ca875cdee74fafbdc820d25aa4c5cf);
+            
+        
+            
+            var popup_d59a10ad61414c8ca1a72d9c0bdfe097 = L.popup({maxWidth: '300'});
+
+            
+                var html_56a6ce0675164b14bd47610745b9be44 = $('         <div id="html_56a6ce0675164b14bd47610745b9be44"                 style="width: 100.0%; height: 100.0%;">                 Städtische Kindertagesstätte Hogrefestraße</div>                 ')[0];
+                popup_d59a10ad61414c8ca1a72d9c0bdfe097.setContent(html_56a6ce0675164b14bd47610745b9be44);
+            
+
+            marker_3a2e5f69ea5a4565abc32c0a20900dda.bindPopup(popup_d59a10ad61414c8ca1a72d9c0bdfe097);
+
+            
+        
+        
+            
+
+            var marker_c2d3548d17654960a24af056dbb967a8 = L.marker(
+                [52.3549155,9.7640752],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_7baef0ebdf984301a9bb524be63b1c1d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c2d3548d17654960a24af056dbb967a8.setIcon(icon_7baef0ebdf984301a9bb524be63b1c1d);
+            
+        
+            
+            var popup_e4331fb330aa43f7b8234175a9561a41 = L.popup({maxWidth: '300'});
+
+            
+                var html_d51faba50f9d4bf7b8428be678cbec27 = $('         <div id="html_d51faba50f9d4bf7b8428be678cbec27"                 style="width: 100.0%; height: 100.0%;">                 Hort im Spielpark Tiefenriede</div>                 ')[0];
+                popup_e4331fb330aa43f7b8234175a9561a41.setContent(html_d51faba50f9d4bf7b8428be678cbec27);
+            
+
+            marker_c2d3548d17654960a24af056dbb967a8.bindPopup(popup_e4331fb330aa43f7b8234175a9561a41);
+
+            
+        
+        
+            
+
+            var marker_920fd449d87b4ca3b4691496a156c10b = L.marker(
+                [52.3938677,9.7357514],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_bbb780eafa114916944c0bf0af9c0197 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_920fd449d87b4ca3b4691496a156c10b.setIcon(icon_bbb780eafa114916944c0bf0af9c0197);
+            
+        
+            
+            var popup_fddd135313c7459e8c0517d12b65f67b = L.popup({maxWidth: '300'});
+
+            
+                var html_d24730bfa2184ad6a5f01bc1e54d4d37 = $('         <div id="html_d24730bfa2184ad6a5f01bc1e54d4d37"                 style="width: 100.0%; height: 100.0%;">                 Familienzentrum im Freizeitheim Vahrenwald</div>                 ')[0];
+                popup_fddd135313c7459e8c0517d12b65f67b.setContent(html_d24730bfa2184ad6a5f01bc1e54d4d37);
+            
+
+            marker_920fd449d87b4ca3b4691496a156c10b.bindPopup(popup_fddd135313c7459e8c0517d12b65f67b);
+
+            
+        
+        
+            
+
+            var marker_4bb45a016de84a3c887fd0de1b0bceba = L.marker(
+                [52.4235634,9.7031136],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_cb22b959e2214d268989a9cb652de966 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4bb45a016de84a3c887fd0de1b0bceba.setIcon(icon_cb22b959e2214d268989a9cb652de966);
+            
+        
+            
+            var popup_6fc6e230e78f49b58c25ad92b4d269c5 = L.popup({maxWidth: '300'});
+
+            
+                var html_8a3f184699eb405c9053e41e1744932e = $('         <div id="html_8a3f184699eb405c9053e41e1744932e"                 style="width: 100.0%; height: 100.0%;">                 Kita Fischteichweg</div>                 ')[0];
+                popup_6fc6e230e78f49b58c25ad92b4d269c5.setContent(html_8a3f184699eb405c9053e41e1744932e);
+            
+
+            marker_4bb45a016de84a3c887fd0de1b0bceba.bindPopup(popup_6fc6e230e78f49b58c25ad92b4d269c5);
+
+            
+        
+        
+            
+
+            var marker_c06b780fb5a04a8280a8a70617821127 = L.marker(
+                [52.3269999,9.6843363],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_49a297563b7a4dd6ac6dcbd9eccd3d64 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c06b780fb5a04a8280a8a70617821127.setIcon(icon_49a297563b7a4dd6ac6dcbd9eccd3d64);
+            
+        
+            
+            var popup_374033f7d4a4426c90bb1a4f00740162 = L.popup({maxWidth: '300'});
+
+            
+                var html_5e6412c1366f48dfb5b3d5e6a74e3963 = $('         <div id="html_5e6412c1366f48dfb5b3d5e6a74e3963"                 style="width: 100.0%; height: 100.0%;">                 Kita Hauptstraße</div>                 ')[0];
+                popup_374033f7d4a4426c90bb1a4f00740162.setContent(html_5e6412c1366f48dfb5b3d5e6a74e3963);
+            
+
+            marker_c06b780fb5a04a8280a8a70617821127.bindPopup(popup_374033f7d4a4426c90bb1a4f00740162);
+
+            
+        
+        
+            
+
+            var marker_d70561a9fa524e5ea013009163533ba1 = L.marker(
+                [52.3341462,9.6983475],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_078eea022a8144d798798b34f4881b79 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d70561a9fa524e5ea013009163533ba1.setIcon(icon_078eea022a8144d798798b34f4881b79);
+            
+        
+            
+            var popup_08f1e024c84f4a53a7ad1281424343d6 = L.popup({maxWidth: '300'});
+
+            
+                var html_f356d45b06d6484fa2f98bfb014b2cf8 = $('         <div id="html_f356d45b06d6484fa2f98bfb014b2cf8"                 style="width: 100.0%; height: 100.0%;">                 Kita Neue Straße</div>                 ')[0];
+                popup_08f1e024c84f4a53a7ad1281424343d6.setContent(html_f356d45b06d6484fa2f98bfb014b2cf8);
+            
+
+            marker_d70561a9fa524e5ea013009163533ba1.bindPopup(popup_08f1e024c84f4a53a7ad1281424343d6);
+
+            
+        
+        
+            
+
+            var marker_b2c4a0a5c3da457f9f6e704608591da6 = L.marker(
+                [52.328548,9.69937624196648],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_66eef36e2c604219a589b96399b5019c);
+            
+        
+            
+
+                var icon_468ccfdff8624b499b37e9148ed5e700 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b2c4a0a5c3da457f9f6e704608591da6.setIcon(icon_468ccfdff8624b499b37e9148ed5e700);
+            
+        
+            
+            var popup_abf7e19ed7244a9893194d1c7a59d2ab = L.popup({maxWidth: '300'});
+
+            
+                var html_3b284aabfeb54b059e5204441e4f112b = $('         <div id="html_3b284aabfeb54b059e5204441e4f112b"                 style="width: 100.0%; height: 100.0%;">                 Städtische Kita In der Rehre</div>                 ')[0];
+                popup_abf7e19ed7244a9893194d1c7a59d2ab.setContent(html_3b284aabfeb54b059e5204441e4f112b);
+            
+
+            marker_b2c4a0a5c3da457f9f6e704608591da6.bindPopup(popup_abf7e19ed7244a9893194d1c7a59d2ab);
+
+            
+        
+        
+        
+        </script>
+        
